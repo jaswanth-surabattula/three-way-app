@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Three-Way App
 
-# Run and deploy your AI Studio app
+A full-stack application with a React frontend and Python backend.
 
-This contains everything you need to run your app locally.
+## Project Structure
 
-View your app in AI Studio: https://ai.studio/apps/9e98393a-e393-46f5-bacf-adcb0b7ffb63
+```
+three-way-app/
+├── frontend/          # React frontend (Vite + TypeScript)
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── package.json
+│   └── vite.config.ts
+├── backend/           # Python backend (FastAPI)
+│   ├── app/
+│   │   ├── api/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── tests/
+│   └── requirements.txt
+├── CLAUDE.md
+├── LICENSE
+└── README.md
+```
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
+### Frontend
 
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Backend
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+## Tech Stack
+
+- **Frontend**: React, TypeScript, Vite
+- **Backend**: Python, FastAPI
