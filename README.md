@@ -2,7 +2,7 @@
 
 A full-stack application with a React frontend and Python backend.
 
-## Project Structure
+## Project Structure 
 
 ```
 three-way-app/
